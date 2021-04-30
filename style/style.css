@@ -1,0 +1,465 @@
+body{
+   box-sizing: border-box; 
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/***************************
+********  HEADER  *********
+**************************/
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20vh;
+}
+
+.logo{
+    width: 25%;
+    background-color: #fff;
+}
+.logo img{
+    width: 150px;
+}
+
+.nav-bar ul{
+    display: flex;
+    justify-content:flex-end;
+
+}
+
+.nav-bar ul li{
+    list-style: none;
+    padding-right: 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-list{
+    padding-bottom: 6px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding: 20px;
+}
+
+.nav-list::before{
+    content: ' ';
+    bottom: 15px;
+    right: 0;
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: #8A2BE2;
+    transition: 0.3s;
+}
+
+.nav-list:hover:before{
+    width: 100%;
+    left: 0;
+}
+
+/***************************
+********  SLIDER  *********
+**************************/
+.slider{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    height: 800px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 800px;
+}
+
+.slider .previous, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    position: relative;
+}
+
+.slider .item .content-slider{
+    position: absolute;
+    top: 0;
+    color: #fff;
+    margin: 0 ;
+}
+
+.slider .item .content-slider h1{
+    font-size: 130px;
+    margin: 0;
+    padding-top: 110px;
+    padding-bottom: 30px;
+}
+
+.slider .item .content-slider p{
+    font-size: 24px;
+    margin: 0px;
+    margin-bottom: 50px;
+}
+
+.slider-button{
+    padding: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: yellow;
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.slider-button:hover{
+    background-color: #8A2BE2;
+    color: #fff;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/*****************************
+********  OUR MENU  *********
+****************************/
+
+.img-gallery{
+    margin-bottom: 65px;
+}
+
+.menu-item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+    margin: 30px;
+    
+}
+
+.menu-header{
+    text-align: center;
+    font-size: 60px;
+    font-family: cursive;
+}
+
+.menu-item__img{
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.menu-item__img h1{
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    bottom: 15px;
+    color:#fff;
+}
+
+.menu-img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.9s;
+}
+
+.menu-img:hover{
+    transform: scale(1.3);
+}
+
+/***********************************
+******** paralax-content  *********
+**********************************/
+
+.paralax-section{
+    background-image: url(https://fitseven.ru/wp-content/uploads/2017/09/salat-caesar-kaloriynost.jpg);
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.paralax-content{
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    left: 0;
+    color: #fff;
+    max-width: 500px;
+}
+
+.content h1{
+    font-weight: 400;
+    font-size: 55px;
+    font-family:sans-serif ;
+    margin-bottom: 25px;
+}
+
+.content p{
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+}
+
+.modern-text{
+    padding-left: 55px;
+    font-size: 18px;
+    line-height: 1.55556;
+    font-weight: 300;
+    letter-spacing: .025em;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.modern-text::before{
+    content: ' ';
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: #8A2BE2;
+    top: 15px;
+    left: 0;
+}
+
+.content button{
+    margin-top: 30px;
+    padding: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: yellow;
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.content button:hover{
+    background-color: #8A2BE2;
+    color: #fff;
+}
+
+/***********************************
+******** pizza-menu  *********
+**********************************/
+
+
+
+.img-gallery{
+    margin-bottom: 65px;
+}
+
+.pizza-item{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 30px;
+    
+}
+
+.pizza-header{
+    text-align: center;
+    font-size: 60px;
+    font-family: cursive;
+}
+
+.pizza-item__img{
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.pizza-container{
+    margin: 0;
+    width:60%;
+}
+
+.pizza-item__img h1{
+    padding-top:20px ;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin: 0;
+    color:#000;
+}
+
+.pizza-container p{
+    margin: 0;
+    padding-top: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    letter-spacing: .025em;
+    color: #8A2BE2;
+}
+
+.pizza-img{
+    margin: 0;
+    height:160px;
+    width:160px;
+    object-fit: cover;
+    padding-top: 30px;
+}
+
+
+/***********************************
+******** paralax-content  *********
+**********************************/
+
+.discount-section{
+    background-image: url(https://img.tsn.ua/cached/1617794865/tsn-e4d2bbace79d9196864837254e47d00a/thumbs/1340x530/fe/6a/3bb76392fd85e3c433aa9d0a8c176afe.jpeg);
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.discount-content{
+    position: relative;
+}
+
+.discount-section__content{
+    position: absolute;
+    left: 0;
+    color: #fff;
+    max-width: 500px;
+}
+
+.discount-section__content h1{
+    font-weight: 400;
+    font-size: 55px;
+    font-family:sans-serif ;
+    margin-bottom: 25px;
+}
+
+.discount-section__content p{
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+}
+
+.modern-text{
+    padding-left: 55px;
+    font-size: 18px;
+    line-height: 1.55556;
+    font-weight: 300;
+    letter-spacing: .025em;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.modern-text::before{
+    content: ' ';
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: #8A2BE2;
+    top: 15px;
+    left: 0;
+}
+
+.discount-section__content button{
+    margin-top: 30px;
+    padding: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: yellow;
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.discount-section__content button:hover{
+    background-color: #8A2BE2;
+    color: #fff;
+}
+
+
+/************************************
+******** reservation-form  *********
+***********************************/
+
+input{
+    padding: 25px;
+}
+
+select{
+    padding: 25px;
+    
+}
+
+.resrvation-form h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: cursive;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 30px; 
+    border: none; 
+    border-bottom: 2px solid #000;  
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #8A2BE2;
+    font-weight: 900;
+    color: #000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    border: none;
+    background-color:yellow;
+}
+
+footer{
+    margin-top: 40px;
+    height: 500px;
+    background-color: #444;
+}
+
