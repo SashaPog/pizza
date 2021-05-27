@@ -534,11 +534,10 @@ input[type=submit]:hover {
 .footer .footer-social a {
     display: inline-block;
     width: 33px;
-    height: 20px;
+    height: 100%;
     padding: 7px 0;
     text-align: center;
     border: 1px solid rgba(256, 256, 256, .3);
-    border-radius: 60px;
     transition: .3s;
 }
 
